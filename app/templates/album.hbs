@@ -3,21 +3,21 @@
     <h1>{{album.name}}</h1>
     <h2>{{album.artist}}</h2>
 </div>
-    <table class="album-listing">
-        {{#each album.songs as |song|}}
-          <tr>
-              <td class="song-track">
-                  <span class="track-number">{{song.track}}</span>
-              </td>
-              <td class="song-name">
-                  {{song.name}}
-              </td>
-              <td class="song-duration">
-                  {{song.duration}}
-              </td>
-          </tr>
-        {{/each}}
+<table class="album-listing">
+    {{#each album.songs as |song|}}
         <tr>
-          <td class="total-duration" colspan="3">Total Time: 40:03</td>
+            <td class="song-track">
+                <span class="track-number">{{song.track}}</span>
+            </td>
+            <td class="song-name">
+                {{song.name}}
+            </td>
+            <td class="song-duration">
+                {{format-duration song.duration}}
+            </td>
         </tr>
-    </table>
+    {{/each}}
+    <tr>
+        <td class="total-duration" colspan="3">Total Time: 40:03</td>
+    </tr>
+</table>
