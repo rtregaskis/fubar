@@ -1,12 +1,12 @@
 <div class="album-list">
 {{#each albums as |album|}}
 <div class="album">
-    <a href="" class="ember-view"><img src="{{album.artwork}}" alt=""></a>
+    {{#link-to 'album' album}}<img src="{{album.artwork}}" alt="">{{/link-to}}
     <p class="album-name">{{album.name}}</p>
     <p class="album-artist">{{album.artist}}</p>
     <p class="song-count">{{album.songs.length}} songs</p>
     {{#if album.isExplicit}}
-        <p class="explicit">Explicit</p>
+        <span class="explicit">Explicit</span>
     {{else}}
         <p>good for kids</p>
     {{/if}}
