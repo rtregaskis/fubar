@@ -5,5 +5,5 @@ export default Ember.Controller.extend({
         var a = this.get('model');
         console.log(a);
         return a;
-    }.property()
+    }.property('model')
 });

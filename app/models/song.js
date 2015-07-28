@@ -5,5 +5,5 @@ export default DS.Model.extend({
     name: DS.attr(),
     duration: DS.attr(),
     url: DS.attr(),
-    album: DS.attr()
+    album: DS.belongsTo()
 });
