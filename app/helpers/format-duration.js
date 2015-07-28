@@ -10,7 +10,7 @@ export function formatDuration(params/*, hash*/) {
   let d = parseInt(params)/60;
 
   let m = Math.floor(d);
-  let s = _.pad(Math.round(d%m * 60), 2, '0');
+  let s = _.pad(params%60, 2, '0');
   return out({s:s, m:m});
 
 }

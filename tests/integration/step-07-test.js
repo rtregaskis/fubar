@@ -58,4 +58,3 @@ test("Each album formats the duration in seconds as MM:SS", function() {
     });
   });
 });
-
