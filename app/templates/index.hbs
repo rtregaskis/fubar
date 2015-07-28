@@ -4,12 +4,11 @@
     {{#link-to 'album' album}}<img src="{{album.artwork}}" alt="">{{/link-to}}
     <p class="album-name">{{album.name}}</p>
     <p class="album-artist">{{album.artist}}</p>
-    <p class="song-count">{{album.songs.length}} songs</p>
+    <p class="song-count">{{album.songCount}} songs
     {{#if album.isExplicit}}
         <span class="explicit">EXPLICIT</span>
-    {{else}}
-        <p>good for kids</p>
     {{/if}}
+    </p>
 </div>
 {{else}}
 nothing here

@@ -3,7 +3,7 @@ import Ember from 'ember';
 
 var out = _.template('${m}:${s}');
 export function formatDuration(params/*, hash*/) {
-    if(!params){
+    if(!params || params[0] === undefined || params[0] === 0){
         return '0:00';
     }
 
