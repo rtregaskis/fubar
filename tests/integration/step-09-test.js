@@ -68,4 +68,3 @@ test("the component toggles betwen the pause and play button when it's clicked",
     equal(find('tr:first .play:contains(❙❙)').length, 0, "The pause button is not showing");
   });
 });
-
