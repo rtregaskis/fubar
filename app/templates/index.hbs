@@ -4,7 +4,12 @@
     <a href="" class="ember-view"><img src="{{album.artwork}}" alt=""></a>
     <p class="album-name">{{album.name}}</p>
     <p class="album-artist">{{album.artist}}</p>
-    <p class="song-count">{{album.songs.length}}</p>
+    <p class="song-count">{{album.songs.length}} songs</p>
+    {{#if album.isExplicit}}
+        <p class="explicit">Explicit</p>
+    {{else}}
+        <p>good for kids</p>
+    {{/if}}
 </div>
 {{else}}
 nothing here
