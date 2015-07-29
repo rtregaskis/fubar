@@ -1,10 +1,7 @@
 <header>
-  {{#link-to index}}<h1>BümBöx</h1>{{/link-to}}
+  {{#link-to 'index'}}<h1>BümBöx</h1>{{/link-to}}
 </header>
 
 {{outlet}}
 
-
-<footer class="ember-view now-playing">
-  <span class="now-playing-empty">Select a song to start playing.</span>
-</footer>
+{{now-playing}}

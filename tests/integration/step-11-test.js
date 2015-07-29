@@ -68,4 +68,3 @@ test("After playing and then pausing a song", function() {
     ok(!exists('.album-listing tr:first span:contains(▶)'), "The song doesn't have a play button");
   });
 });
-
