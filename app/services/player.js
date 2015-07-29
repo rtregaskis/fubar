@@ -14,17 +14,21 @@ export default Ember.Service.extend({
     }.on('init'),
     pause:function (){
         this.get('audioElement').pause();
-        this.set('song', null);
     },
     play:function (song){
         this.set('audioElement.src', song.get('url'));
         this.get('audioElement').play();
         this.set('song', song);
     },
+    resume:function (){
+        this.get('audioElement').play();
+    },
     didStartPlaying:function (){
+        console.log('did play');
         this.set('isPlaying', true);
     },
     didPausePlaying:function (){
+        console.log('did pause');
         this.set('isPlaying', false);
     },
     didUpdateTime:function (){
